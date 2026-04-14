@@ -81,6 +81,12 @@ fn print_months() {
     for month in months {
         println!("{month}");
     }
+    let message = "Months of the year";
+    let number = 12;
+    let number: &str = &number.to_string(); // Convert the number to a string slice
+    // Array content must match the same type, so we convert the number to a string slice before creating the array
+    let new_array = [message, number];
+    println!("New array: {new_array:?}");
 }
 
 fn read_array_index() {
