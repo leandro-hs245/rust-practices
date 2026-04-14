@@ -13,5 +13,10 @@ fn shadowing_example() {
     let number = 1;
     println!("The number is {number}");
     let number = number + 1;
+    {
+        // The value of number is 2 in this scope, but it is not changed in the outer scope
+        let number = number * 2;
+        println!("The number is {number}");
+    }
     println!("The number is {number}");
 }
